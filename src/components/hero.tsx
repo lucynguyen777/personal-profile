@@ -39,7 +39,7 @@ export default function Hero() {
             View Work
           </Link>
           <Link
-            href="https://github.com"
+            href="https://github.com/lucynguyen777"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-8 py-4 text-lg border-2 border-[#111111] text-[#111111] hover:bg-[#111111] hover:text-white transition-colors duration-300 rounded"
@@ -47,7 +47,7 @@ export default function Hero() {
             GitHub
           </Link>
           <Link
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/hanguyen"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-8 py-4 text-lg border border-[#111111]/30 text-[#111111] hover:bg-[#111111] hover:text-white transition-colors duration-300 rounded"

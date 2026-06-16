@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, IBM_Plex_Sans } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,7 +16,10 @@ const ibmPlexSans = IBM_Plex_Sans({
   display: "swap",
 });
 
+const baseUrl = "https://lucynguyen777.github.io/personal-profile";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: "Ha Nguyen | AI Builder & Researcher",
   description:
     "Building AI tools for scientific research, language learning, and biological discovery. Combining biological sciences, artificial intelligence, and software engineering.",
@@ -32,11 +36,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://hanguyen.dev",
+    url: baseUrl,
     title: "Ha Nguyen | AI Builder & Researcher",
     description:
       "Building AI tools for scientific research, language learning, and biological discovery.",
-    siteName: "Ha Nguyen Portfolio",
+    siteName: "Ha Nguyen",
   },
   twitter: {
     card: "summary_large_image",
@@ -56,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${ibmPlexSans.variable}`}>
+    <html lang="en" className={`${GeistSans.variable} ${inter.variable} ${ibmPlexSans.variable}`}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );

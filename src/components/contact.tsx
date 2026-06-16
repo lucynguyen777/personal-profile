@@ -10,7 +10,7 @@ const links = [
   },
   {
     label: "GitHub",
-    href: "https://github.com/hanguyen",
+    href: "https://github.com/lucynguyen777",
   },
   {
     label: "LinkedIn",
