@@ -27,9 +27,11 @@ Static output is in `./out`.
 
 ## Deploy
 
-Push to `main` — GitHub Actions automatically builds and deploys to GitHub Pages.
+Push to `main` — GitHub Actions automatically builds and deploys to GitHub Pages at `https://lucynguyen777.github.io/personal-profile/`.
 
 Manual deploy trigger available via GitHub Actions → `workflow_dispatch`.
+
+**After first push**, enable GitHub Pages in repo Settings → Pages → Source: "GitHub Actions".
 
 ## Structure
 
