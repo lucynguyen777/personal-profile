@@ -2,65 +2,62 @@
 
 import { motion } from "framer-motion";
 
-const aboutItems = [
-  {
-    title: "Biological Sciences",
-    description:
-      "Deep expertise in molecular biology, genetics, and bioinformatics. Understanding the complexities of living systems provides the foundation for building meaningful AI tools.",
-    delay: 0,
-  },
-  {
-    title: "Transition to AI",
-    description:
-      "Recognizing the transformative power of artificial intelligence, I made a deliberate shift toward LLMs, machine learning, and computational research methods.",
-    delay: 0.2,
-  },
-  {
-    title: "Research Mindset",
-    description:
-      "Approaching problems with scientific rigor: formulating hypotheses, designing experiments, analyzing results, and iterating based on evidence.",
-    delay: 0.4,
-  },
-  {
-    title: "Product Development",
-    description:
-      "Building practical tools that solve real-world problems for researchers, students, and knowledge workers in scientific domains.",
-    delay: 0.6,
-  },
-];
-
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 md:px-12 lg:px-24 bg-[#F7F5F2]">
-      <div className="max-w-6xl mx-auto">
-        <motion.h2
-          className="text-5xl md:text-7xl font-bold tracking-tighter mb-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          About
-        </motion.h2>
+    <section id="about" className="section-pad bg-[#F3F0EA]">
+      <div className="page-width">
+        <div className="mb-16 md:mb-24">
+          <span className="chapter-marker">Chapter 01</span>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {aboutItems.map((item, index) => (
-            <motion.div
-              key={index}
-              className="group"
+        <div className="page-spread items-start">
+          <div className="spread-left mb-12 md:mb-0 sticky top-32">
+            <h2 className="font-serif text-6xl md:text-8xl tracking-tight text-[#111] leading-[0.9]">
+              ABOUT
+            </h2>
+          </div>
+
+          <div className="spread-right space-y-8 md:space-y-12">
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: item.delay }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8 }}
+              className="text-2xl md:text-4xl font-serif text-[#111] leading-tight"
             >
-              <h3 className="text-3xl md:text-4xl font-semibold mb-6 group-hover:text-[#333333] transition-colors">
-                {item.title}
-              </h3>
-              <p className="text-xl leading-relaxed text-[#111111]/80">
-                {item.description}
+              My journey began in biological sciences, where I learned to analyze complex natural systems. Today, I apply that same analytical rigor to building artificial intelligence.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="prose prose-lg text-[#111]/70 leading-relaxed max-w-none space-y-6"
+            >
+              <p>
+                As an AI Product Builder and Research Engineer, my focus is on bridging the gap between theoretical capabilities and practical application. I specialize in creating tools that enhance how we learn, research, and discover.
+              </p>
+              <p>
+                Whether it's developing evaluation frameworks for large language models or building specialized bioinformatics pipelines, my work is driven by a desire to accelerate scientific and human progress.
+              </p>
+              <p>
+                I thrive at the intersection of disciplines, combining molecular biology insights with modern software engineering and advanced machine learning techniques to solve multi-faceted problems.
               </p>
             </motion.div>
-          ))}
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="pt-8 border-t border-[#111]/10 flex flex-wrap gap-4"
+            >
+              <span className="px-4 py-2 border border-[#111]/20 rounded-full text-sm text-[#111]/60">AI Product Builder</span>
+              <span className="px-4 py-2 border border-[#111]/20 rounded-full text-sm text-[#111]/60">Bioinformatics</span>
+              <span className="px-4 py-2 border border-[#111]/20 rounded-full text-sm text-[#111]/60">Research Engineer</span>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -20,7 +20,7 @@ const baseUrl = "https://lucynguyen777.github.io/personal-profile";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: "Ha Nguyen | AI Builder & Researcher",
+  title: "Ha Nguyen — AI × Biology × Research",
   description:
     "Building AI tools for scientific research, language learning, and biological discovery. Combining biological sciences, artificial intelligence, and software engineering.",
   keywords: [
@@ -28,23 +28,23 @@ export const metadata: Metadata = {
     "Artificial Intelligence",
     "Bioinformatics",
     "Research",
-    "Software Engineering",
     "LLM",
     "Language Learning",
+    "Ha Nguyen",
   ],
   authors: [{ name: "Ha Nguyen" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: baseUrl,
-    title: "Ha Nguyen | AI Builder & Researcher",
+    siteName: "Ha Nguyen",
+    title: "Ha Nguyen — AI × Biology × Research",
     description:
       "Building AI tools for scientific research, language learning, and biological discovery.",
-    siteName: "Ha Nguyen",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ha Nguyen | AI Builder & Researcher",
+    title: "Ha Nguyen — AI × Biology × Research",
     description:
       "Building AI tools for scientific research, language learning, and biological discovery.",
   },

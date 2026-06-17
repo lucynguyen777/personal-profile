@@ -2,77 +2,73 @@
 
 import { motion } from "framer-motion";
 
-const interests = [
+const themes = [
   {
     title: "Artificial Intelligence",
-    description:
-      "Advancing the capabilities and understanding of intelligent systems through novel architectures, training methods, and alignment techniques.",
-    delay: 0,
+    description: "Developing robust models and tools that extend human cognitive capabilities and automate complex analytical tasks.",
   },
   {
     title: "Bioinformatics",
-    description:
-      "Applying computational methods to biological data. Developing tools that accelerate genomic analysis, protein modeling, and drug discovery pipelines.",
-    delay: 0.2,
+    description: "Applying computational methods to understand biological data, from sequence analysis to evolutionary modeling.",
   },
   {
     title: "Scientific Discovery",
-    description:
-      "Using AI to accelerate the scientific method: automated hypothesis generation, experimental design, and literature synthesis at scale.",
-    delay: 0.4,
+    description: "Building systems that accelerate the pace of research by streamlining literature review and experimental design.",
   },
   {
     title: "LLM Evaluation",
-    description:
-      "Building rigorous, reproducible frameworks for assessing model capabilities, limitations, and safety across diverse domains and tasks.",
-    delay: 0.6,
+    description: "Creating rigorous frameworks to test, benchmark, and align language models for specialized domains.",
   },
   {
     title: "Language Technology",
-    description:
-      "Creating systems that understand, generate, and translate human language with greater nuance, accuracy, and cultural awareness.",
-    delay: 0.8,
+    description: "Engineering applications that facilitate language acquisition, translation, and linguistic analysis.",
   },
   {
     title: "Human Learning",
-    description:
-      "Understanding how people learn and designing AI tools that augment rather than replace human cognition and curiosity.",
-    delay: 1.0,
-  },
+    description: "Designing educational tools that adapt to individual learning patterns and provide meaningful feedback.",
+  }
 ];
 
 export default function ResearchInterests() {
   return (
-    <section id="research" className="py-24 px-6 md:px-12 lg:px-24 bg-[#F7F5F2]">
-      <div className="max-w-6xl mx-auto">
-        <motion.h2
-          className="text-5xl md:text-7xl font-bold tracking-tighter mb-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          Research Interests
-        </motion.h2>
+    <section id="research" className="section-pad bg-[#FAF9F6] border-t border-[#111]/[0.06]">
+      <div className="page-width">
+        <div className="mb-16 md:mb-24">
+          <span className="chapter-marker">Chapter 06</span>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {interests.map((interest, index) => (
-            <motion.div
-              key={index}
-              className="group p-8 bg-white rounded"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: interest.delay }}
-            >
-              <h3 className="text-2xl font-semibold mb-4 group-hover:text-[#333333] transition-colors">
-                {interest.title}
-              </h3>
-              <p className="text-base leading-relaxed text-[#111111]/70">
-                {interest.description}
-              </p>
-            </motion.div>
-          ))}
+        <div className="page-spread">
+          <div className="spread-left mb-16 md:mb-0">
+            <h2 className="font-serif text-5xl md:text-7xl tracking-tight text-[#111] leading-[0.9] sticky top-32">
+              RESEARCH<br />THEMES
+            </h2>
+          </div>
+
+          <div className="spread-right">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
+              {themes.map((theme, index) => (
+                <motion.div
+                  key={theme.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="space-y-4"
+                >
+                  <div className="h-px w-full bg-[#111]/10 mb-8" />
+                  <span className="text-[#7A6EA5] font-serif text-xl italic">
+                    0{index + 1}
+                  </span>
+                  <h3 className="text-2xl font-serif text-[#111] leading-tight">
+                    {theme.title}
+                  </h3>
+                  <p className="text-[#111]/60 leading-relaxed">
+                    {theme.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
