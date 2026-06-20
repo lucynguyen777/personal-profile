@@ -1,4 +1,4 @@
-# Ha Nguyen — Portfolio
+# Nguyen Thi Thu Ha — Portfolio
 
 Personal website built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
 
